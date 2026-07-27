@@ -55,7 +55,7 @@ Giảm số lượng người xử lý ticket cần cho mỗi ngày
 Chuẩn hóa câu trả lời, tối ưu hệ thống ticket, hệ thống có câu trả lời mẫu sẵn để chọn thay vì chuyển qua tab lưu trữ câu trả lời
 
 **AI hypothesis:**
-AI đọc nội dung ticket, phân loại tự, sinh câu trả lời và tự động cập nhật trạng thái ticket
+AI đọc nội dung ticket, phân loại tự, sinh câu trả lời và tự động cập nhật trạng thái ticket, AI trả lời hàng loạt ticket chung chủ đề. 
 
 **Quick gut:**
 Ai agent
@@ -77,7 +77,60 @@ A --> B --> C --> D --> E --> F
 ## Problem Card #2 — Mail form 
 
 **Problem 1 câu:**  
-Nhân viên kiểm tra nội dung tic 
+Nhân viên kiểm tra nội dung ticket xác định loại ticket tra cứu với kho mail trả lời mẫu paste lên rồi gửi đi và hoàn thành ticket
+
+**Actor:**
+Nhân viên helpdesk
+
+**Current workflow:** 
+```mermaid
+flowchart LR
+
+A([Start])
+B[Nhận ticket]
+C[Kiểm tra nội dung ticket]
+D[Xác định loại ticket]
+E[Tra cứu câu trả lời mẫu]
+F[Copy và paste mẫu mail]
+G[đóng ticket]
+h[Cập nhật trạng thái ticket]
+J([End])
+
+A --> B --> C --> D --> E --> F --> G --> h --> J
+```
+**Bottleneck:**  
+Lặp đi lặp lại xác định loại ticket tra cứu mail mẫu paste vào để gửi ticket đi
+
+**Impact:**
+Tăng thời gian xử lý ticket giảm năng suất helpdesk 
+
+**Success metric:**
+Loại bỏ hoàn toàn form trả lời mẫu, giảm số lượng helpdesk để giải quyết
+
+**Non AI Alternative:**
+Tối ưu mẫu trả lời sẵn trong hệ thống ticket, nhân viên nhập và tìm kiếm mẫu trả lời theo từ khóa
+
+**AI hypothesis:** 
+AI đọc nội dung ticket, tự động phân loại ticket, kiểm tra form mail mẫu tự động trả lời và cập nhật trạng thái ticket, trả lời hàng loạt ticket chung chủ đề.
+
+**Quick gut:** 
+AI agent
+
+### Draft future workflow
+
+A([Start])
+B[AI kiểm tra nội dung ticket]
+G[AI gom ticket chung chủ đề]
+C[AI tìm kiếm form mail mẫu cho từng chủ đề]
+H[AI trả lời ticket]
+D[AI đóng ticket]
+E[AI cập nhật trạng thái hoàn thành ticket]
+F([End])
+
+A --> B --> G --> C --> H --> D --> E --> F
+```
+
+
 
 
 
