@@ -131,6 +131,61 @@ F([End])
 
 A --> B --> G --> C --> H --> D --> E --> F
 ```
+## Problem Card #3 — Chuyển ticket
+
+**Problem:**
+Ticket khác chủ đề sẽ được tổng hợp thủ công lại gửi lại cho cấp trên xử lý, ticket bị pending 3-4 ngày sau mới được giải quyết
+
+**Actor:** 
+Khách hàng gửi ticket khi gặp các trường hợp ngoài luồng
+
+**Current workflow:** 
+```mermaid
+flowchart LR
+
+A([Start])
+B[Kiểm tra nội dung ticket]
+G[Gom ticket khác luồng]
+C[Chuyển ticket cho cấp trên]
+H[Chủ động check trạng thái ticket]
+E[Chủ động yêu cầu cấp trên xử lý ticket]
+F([End])
+
+A --> B --> G --> C --> H --> E --> F
+```
+**Bottleneck:**  
+Gom ticket thủ công, chủ động check tiến độ và đốc thúc xử lý. 
+
+**Impact:** 
+Pending ticket xử lý không kịp thời ảnh hưởng trải nghiệm của khác hàng. 
+
+**Success metric:**
+Loại bỏ khâu gom ticket thủ công, loại bỏ khâu check trạng thái kiểm tra ticket và đốc thúc cấp trên.
+
+**Non AI Alternative:**
+Đào tạo chuyên viên xử lý case đặc thù thay vì chuyển cho cấp trên chuyên viên này nắm quyền trả lời và xử lý các ticket đặc thù
+
+**AI hypothesis:**
+AI đọc nội dung ticket, AI gom ticket đặc thù chuyển cho cấp trên, AI tự động kiểm tra trạng thái và đốc thúc xử lý ticket sớm
+
+**Quick gut** 
+AI Agent
+
+### Draft future workflow
+```mermaid
+flowchart LR
+
+A([Start])
+B[AI kiểm tra nội dung ticket]
+G[AI gom ticket có chủ đề đặc thù]
+C[AI gửi ticket cho cấp trên]
+H[AI đốc thúc xử lý ticket ]
+F([End])
+
+A --> B --> G --> C --> H --> F
+```
+
+
 
 
 
