@@ -10,7 +10,7 @@ Case: Tôi từng làm trong bộ phận hỗ trợ xử lý các khiếu nại 
 |2|Lặp lại|Nhân viên tra form trả lời mẫu rồi copy paste để gửi lại mail trả lời ticket|nhân viên help desk|lặp lại mỗi ticket|
 |3|Ai có thể tốt hơn|Copy nhầm form mail trả lời mẫu|Khác hàng|Copy nhầm cột nhầm ô chứa form mail mẫu|
 |4|Mất thời gian|Nhân viên tự gửi lại các case ngoài phạm vi lại cho cấp trên|nhân viên help desk, quản lý|ticket bị dồn 3-4 ngày mới được trả lời|
-|5||Mất thời gian, lặp lại|nhân viên help desk chủ động kiểm tra tiến độ các ticket ngoài phạm vi trả lời và nhắc cấp trên hoàn thành, chậm tiến độ bị đánh giá phản hồi chậm|nhân viên help desk, quản lý|
+|5|Mất thời gian, lặp lại|nhân viên help desk chủ động kiểm tra tiến độ các ticket ngoài phạm vi trả lời và nhắc cấp trên hoàn thành, chậm tiến độ bị đánh giá phản hồi chậm|nhân viên help desk, quản lý|thời gian pending ticket đặc thù 3-4 ngày|
 
 ## Top 3
 
