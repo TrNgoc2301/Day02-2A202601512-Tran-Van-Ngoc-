@@ -117,6 +117,8 @@ AI đọc nội dung ticket, tự động phân loại ticket, kiểm tra form m
 AI agent
 
 ### Draft future workflow
+```mermaid
+flowchart LR
 
 A([Start])
 B[AI kiểm tra nội dung ticket]
