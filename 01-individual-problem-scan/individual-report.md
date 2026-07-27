@@ -60,10 +60,24 @@ AI đọc nội dung ticket, phân loại tự, sinh câu trả lời và tự �
 **Quick gut:**
 Ai agent
 
+### Draft future workflow
+```mermaid
+flowchart LR
+
+A([Start])
+B[AI kiểm tra nội dung ticket]
+C[AI trả lời ticket]
+D[AI đóng ticket]
+E[AI cập nhật trạng thái hoàn thành ticket]
+F([End])
+
+A --> B --> C --> D --> E --> F
+```
+
 ## Problem Card #2 — Mail form 
 
 **Problem 1 câu:**  
-
+Nhân viên kiểm tra nội dung tic 
 
 
 
